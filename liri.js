@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 var keys = require("./keys.js");
-// For Spotify
+// For Spotify am i to use axios??
 var spotify = new Spotify(keys.spotify)
 var Spotify = require("node-spotify-api")
 // For Movie
@@ -11,8 +11,16 @@ var command = process.argv[2];
 var input = process.argv[3];
 // Do-What-It-Says
 var fs = require("fs");
+// recieve user input
+var command = process.argv[2];
+var input = process.argv[3];
+
 
 switch(command){
+    //looks up concert info
+    case 'concert-this':
+        concert()
+        break;
     //Spotify
     case 'spotify-this-song':
         song();
@@ -29,7 +37,22 @@ switch(command){
                 default:
                     console.log(`I'm sorry, I dont understand.`)
 }
+// runs song input 
+function song(){
+    var song = '';
+    if (input === undefined){
+        song = 'Future'
+    }else {
+        song = input
+    }
+    console.log('----------')
+    console.log("Concert Info")
 
+    // gets concert info
+    request("https://rest.bandsintown.com/artists/" + song + "/events?app_id=codingbootcamp")
+    
+}
+ 
 function song(){
     var song = '';
     if (input === undefined){
@@ -41,15 +64,15 @@ function song(){
     console.log("Song Information")
 
     spotify.search({type: 'track', query: song}), function(err,data){
-        if (err){
-            console.log(`Song: ${data.tracks.items[0].name}`);
-            console.log (`Artist(s): ${data.tracks.items[0].artists[0].name}`);
-            console.log(`Album: ${data.tracks.items[0].album.name}`);
-            console.log(`Preview Link: ${data.tracks.items[0].external_urls.spotify}`)
-            var songData = `\nUsed spotify-this-song to find: \nArtist: ${data.tracks.items[0].artists[0].name} \nSong Name: ${data.tracks.items[0].name} \nSpotify Preview Link: ${data.tracks.items[0].external_urls.spotify} \nAlbum: ${data.tracks.items[0].album.name}\n--------------------`
-            fs.appendFile('log.txt', songData, function(error){
-                if (error) throw error;
-            });
+        if (err){  
+            return console.log('Mistake has been made')
+        };
+        var songData = `\nUsed spotify-this-song to find: \nArtist: ${data.tracks.items[0].artists[0].name} \nSong Name: ${data.tracks.items[0].name} \nSpotify Preview Link: ${data.tracks.items[0].external_urls.spotify} \nAlbum: ${data.tracks.items[0].album.name}\n----------- ---------`
+        for (i = 0; i < songData.length; i++){
+        console.log(`Song: ${data.tracks.items[0].name}`);
+        console.log (`Artist(s): ${data.tracks.items[0].artists[0].name}`);
+        console.log(`Album: ${data.tracks.items[0].album.name}`);
+        console.log(`Preview Link: ${data.tracks.items[0].external_urls.spotify}`)
         }
     }
 }
