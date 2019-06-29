@@ -1,25 +1,33 @@
 require("dotenv").config();
-
-var keys = require("./keys.js");
-// For Spotify am i to use axios??
-var spotify = new Spotify(keys.spotify)
+// axios for info
+var axios = require("axios")
 var Spotify = require("node-spotify-api")
+var fs = require("fs");
+var moment = require("moment")
+var keys = require("./keys.js");
+// For Spotify?
+var spotify = new Spotify(keys.spotify);
+
+var nodeCommand = process.argv;
+var artist = "";
+var songName = "";
+var movieName = "";
+
+
 // For Movie
 var request = require("request")
-// User input
-var command = process.argv[2];
-var input = process.argv[3];
+
 // Do-What-It-Says
 var fs = require("fs");
 // recieve user input
 var command = process.argv[2];
-var input = process.argv[3];
+var input = process.argv;
 
 
 switch(command){
     //looks up concert info
     case 'concert-this':
-        concert()
+        concert(title)
         break;
     //Spotify
     case 'spotify-this-song':
@@ -60,10 +68,11 @@ function song(){
     } else {
         song = input;
     }
-    console.log('----------')
-    console.log("Song Information")
+    
 
-    spotify.search({type: 'track', query: song}), function(err,data){
+    spotify.search({type: 'track', query: 'Song',
+},
+     function (err,data){
         if (err){  
             return console.log('Mistake has been made')
         };
@@ -75,7 +84,7 @@ function song(){
         console.log(`Preview Link: ${data.tracks.items[0].external_urls.spotify}`)
         }
     }
-}
+    )}
 
 function movie(){
     var movie = '';
