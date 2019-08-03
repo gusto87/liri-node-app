@@ -1,0 +1,21 @@
+
+Used movie-this to find: 
+Title: Space Jam 
+Year: 1996 
+IMDB Rating: 43% 
+Rotten Tomatoes Rating: 6.4/10 
+Country:USA 
+Language: English 
+Plot: In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan. 
+Actor(s): Michael Jordan, Wayne Knight, Theresa Randle, Manner Washington 
+--------------------
+Used movie-this to find: 
+Title: Space Jam 
+Year: 1996 
+IMDB Rating: 43% 
+Rotten Tomatoes Rating: 6.4/10 
+Country:USA 
+Language: English 
+Plot: In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan. 
+Actor(s): Michael Jordan, Wayne Knight, Theresa Randle, Manner Washington 
+--------------------
