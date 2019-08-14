@@ -22,7 +22,7 @@ var fs = require("fs");
 // recieve user input
 var command = process.argv[2];
 var input = process.argv[3];
-console.log(input)
+console.log('command:', command, 'input:', input)
 
 
 switch (command) {
@@ -31,7 +31,7 @@ switch (command) {
         concert(input)
         break;
         //Spotify
-    case 'spotify-this-song':
+    case 'song-this':
         song();
         break;
         //Movie
@@ -48,26 +48,26 @@ switch (command) {
 }
 // runs song input but is pulling multiple copies of data 
 function concert() {
-    var song = '';
+    var concert = '';
     if (input === undefined) {
-        song = 'Future'
+        concert = 'Future'
     } else {
-        song = input
+        concert = input
     }
     console.log('----------')
     console.log("Concert Info")
 
     // gets concert info
-    request("https://rest.bandsintown.com/artists/" + song + "/events?app_id=codingbootcamp", function (error, response, body) {
+    request("https://rest.bandsintown.com/artists/" + concert + "/events?app_id=codingbootcamp", function (error, response, body) {
         console.log(`Concert Info: ${JSON.parse(body).concertInfo}`);
-    console.log(body)
+    console.log(JSON.parse(body)[0])
     })
 }
 
 function song() {
     var song = '';
     if (input === undefined) {
-        song = 'Everlong Foo FIghters'
+        song = 'Everlong'
     } else {
         song = input;
     }
@@ -75,18 +75,20 @@ function song() {
 
     spotify.search({
             type: 'track',
-            query: 'Song',
+            query: song,
         },
         function (err, data) {
             if (err) {
                 return console.log('Mistake has been made')
             };
-            var songData = `\nUsed spotify-this-song to find: \nArtist: ${data.tracks.items[0].artists[0].name} \nSong Name: ${data.tracks.items[0].name} \nSpotify Preview Link: ${data.tracks.items[0].external_urls.spotify} \nAlbum: ${data.tracks.items[0].album.name}\n----------- ---------`
+            var songData = data.tracks.items
+            
+            console.log('song data from spotify search', data)
             for (i = 0; i < songData.length; i++) {
-                console.log(`Song: ${data.tracks.items[0].name}`);
-                console.log(`Artist(s): ${data.tracks.items[0].artists[0].name}`);
-                console.log(`Album: ${data.tracks.items[0].album.name}`);
-                console.log(`Preview Link: ${data.tracks.items[0].external_urls.spotify}`)
+                console.log(`Song: ${songData.tracks.items[i].name}`);
+                console.log(`Artist(s): ${songData.tracks.items[i].artists[0].name}`);
+                console.log(`Album: ${songData.tracks.items[i].album.name}`);
+                console.log(`Preview Link: ${songData.tracks.items[i].external_urls.spotify}`)
             }
         }
     )
@@ -165,5 +167,5 @@ function executeDir() {
 
             }
         }
-    })
+    }) 
 }

@@ -19,3 +19,93 @@ Language: English
 Plot: In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan. 
 Actor(s): Michael Jordan, Wayne Knight, Theresa Randle, Manner Washington 
 --------------------
+Used movie-this to find: 
+Title: 2001: A Space Odyssey 
+Year: 1968 
+IMDB Rating: 93% 
+Rotten Tomatoes Rating: 8.3/10 
+Country:UK, USA 
+Language: English, Russian 
+Plot: After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000. 
+Actor(s): Keir Dullea, Gary Lockwood, William Sylvester, Daniel Richter 
+--------------------
+Used movie-this to find: 
+Title: Space Jam 
+Year: 1996 
+IMDB Rating: 43% 
+Rotten Tomatoes Rating: 6.4/10 
+Country:USA 
+Language: English 
+Plot: In a desperate attempt to win a basketball match and earn their freedom, the Looney Tunes seek the aid of retired basketball champion, Michael Jordan. 
+Actor(s): Michael Jordan, Wayne Knight, Theresa Randle, Manner Washington 
+--------------------
+Used movie-this to find: 
+Title: Pulpfiction 
+Year: 2009 
+IMDB Rating: No ratings available for this movie.  
+Rotten Tomatoes Rating: 1.8/10 
+Country:N/A 
+Language: N/A 
+Plot: This program profiles writers of the 20s, 30s, and 40s, known as the Pulp Fiction-era. These writers created the iconic characters who live on today in our collective hearts and ... 
+Actor(s): N/A 
+--------------------
+Used movie-this to find: 
+Title: Pulp 
+Year: 1972 
+IMDB Rating: 75% 
+Rotten Tomatoes Rating: 6.0/10 
+Country:UK 
+Language: English 
+Plot: A seedy writer of sleazy pulp novels is recruited by a quirky, reclusive ex-actor to help him write his biography at his house in Malta. 
+Actor(s): Michael Caine, Mickey Rooney, Lionel Stander, Lizabeth Scott 
+--------------------
+Used movie-this to find: 
+Title: Goodfellas 
+Year: 1990 
+IMDB Rating: 96% 
+Rotten Tomatoes Rating: 8.7/10 
+Country:USA 
+Language: English, Italian 
+Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate. 
+Actor(s): Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco 
+--------------------
+Used movie-this to find: 
+Title: Goodfellas 
+Year: 1990 
+IMDB Rating: 96% 
+Rotten Tomatoes Rating: 8.7/10 
+Country:USA 
+Language: English, Italian 
+Plot: The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate. 
+Actor(s): Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco 
+--------------------
+Used movie-this to find: 
+Title: We're the Millers 
+Year: 2013 
+IMDB Rating: 48% 
+Rotten Tomatoes Rating: 7.0/10 
+Country:USA, UK 
+Language: English, Spanish 
+Plot: A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico. 
+Actor(s): Jennifer Aniston, Jason Sudeikis, Emma Roberts, Will Poulter 
+--------------------
+Used movie-this to find: 
+Title: Grease 
+Year: 1978 
+IMDB Rating: 75% 
+Rotten Tomatoes Rating: 7.2/10 
+Country:USA 
+Language: English 
+Plot: Good girl Sandy and greaser Danny fell in love over the summer. When they unexpectedly discover they're now in the same high school, will they be able to rekindle their romance? 
+Actor(s): John Travolta, Olivia Newton-John, Stockard Channing, Jeff Conaway 
+--------------------
+Used movie-this to find: 
+Title: Killers 
+Year: 2010 
+IMDB Rating: 10% 
+Rotten Tomatoes Rating: 5.4/10 
+Country:USA 
+Language: English 
+Plot: A vacationing woman meets her ideal man, leading to a swift marriage. Back at home, however, their idyllic life is upset when they discover their neighbors could be assassins who have been contracted to kill the couple.. 
+Actor(s): Ashton Kutcher, Katherine Heigl, Tom Selleck, Catherine O'Hara 
+--------------------
