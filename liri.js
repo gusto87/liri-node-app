@@ -31,7 +31,7 @@ switch (command) {
         concert(input)
         break;
         //Spotify
-    case 'song-this':
+    case 'spotify-this-song':
         song();
         break;
         //Movie
@@ -48,17 +48,17 @@ switch (command) {
 }
 // runs song input but is pulling multiple copies of data 
 function concert() {
-    var concert = '';
+    var song = '';
     if (input === undefined) {
-        concert = 'Future'
+        song = 'Future'
     } else {
-        concert = input
+        song = input
     }
     console.log('----------')
     console.log("Concert Info")
 
     // gets concert info
-    request("https://rest.bandsintown.com/artists/" + concert + "/events?app_id=codingbootcamp", function (error, response, body) {
+    request("https://rest.bandsintown.com/artists/" + song + "/events?app_id=codingbootcamp", function (error, response, body) {
         console.log(`Concert Info: ${JSON.parse(body).concertInfo}`);
     console.log(JSON.parse(body)[0])
     })
@@ -81,10 +81,9 @@ function song() {
             if (err) {
                 return console.log('Mistake has been made')
             };
-            var songData = data.tracks.items
-            
+            var songData = data
             console.log('song data from spotify search', data)
-            for (i = 0; i < songData.length; i++) {
+            for (i = 0; i < songData.tracks.items.length; i++) {
                 console.log(`Song: ${songData.tracks.items[i].name}`);
                 console.log(`Artist(s): ${songData.tracks.items[i].artists[0].name}`);
                 console.log(`Album: ${songData.tracks.items[i].album.name}`);
@@ -144,7 +143,7 @@ function movie() {
     });
 }
 
-function executeDir() {
+function directions() {
     fs.readFile('random.txt', 'utf8', function (err, data) {
         if (err) {
             console.log(error);
@@ -167,5 +166,5 @@ function executeDir() {
 
             }
         }
-    }) 
+    })
 }
