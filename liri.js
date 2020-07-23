@@ -104,7 +104,7 @@ function movie() {
         console.log('Here is the movie info')
     }
     // grabs movie info from 
-    request("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece", function (error, response, body) {
+    request("http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=cc1a03f5", function (error, response, body) {
         if (!error && response.statusCode === 200) {
             console.log(`Movie Title: ${JSON.parse(body).Title}`);
             console.log(`Release Year: ${JSON.parse(body).Year}`);
